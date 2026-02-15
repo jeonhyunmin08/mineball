@@ -17,6 +17,13 @@
       justify-content: center; /* 좌우 가운데 정렬 */
       align-items: center;     /* 위아래 가운데 정렬 */
     }
+     .wrap{
+      min-height: 100dvh;                /* 모바일 주소창 변화 대응 */
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 0 clamp(12px, 4vw, 28px); /* 좌우 여백(기기 따라 자동) */
+    }
     
     /* 이미지가 화면을 꽉 채우도록 */
     img {
@@ -35,4 +42,5 @@
 
 </body>
 </html>
+
 
