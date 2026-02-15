@@ -2,45 +2,47 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>대한유소년야구연맹 로컬룰</title>
 
   <style>
-    /* 모든 기본 여백 제거 */
-     html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background: black;
-      display: flex;
-      justify-content: center; /* 좌우 가운데 정렬 */
-      align-items: center;     /* 위아래 가운데 정렬 */
+    html, body{
+      margin:0;
+      padding:0;
+      width:100%;
+      height:100%;
+      background:#000;
     }
-     .wrap{
-      min-height: 100dvh;                /* 모바일 주소창 변화 대응 */
+
+    /* 화면 전체를 쓰되 좌우 여백만 조금 */
+    .wrap{
+      width: 100vw;
+      height: 100dvh;                 /* 모바일 주소창 변화 대응 */
+      padding: 0 14px;                /* 좌우 여백 */
       display:flex;
       align-items:center;
       justify-content:center;
-      padding: 0 clamp(12px, 4vw, 28px); /* 좌우 여백(기기 따라 자동) */
+      overflow:hidden;                /* 삐져나오는 것 방지 */
     }
-    
-    /* 이미지가 화면을 꽉 채우도록 */
-    img {
-      height: 100vh;      /* 화면 높이에 맞춤 */
-      width: auto;        /* 비율 유지 */
+
+    /* 핵심: 가로/세로 둘 다 "최대치"를 걸어서 절대 잘리지 않게 */
+    img{
+      display:block;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
       object-fit: contain;
-      display: block;
     }
   </style>
 </head>
 
 <body>
-
-  <!-- 여기 파일 이름만 바꾸면 됨 -->
-  <img src="rule.png" alt="대한유소년야구연맹 로컬룰">
-
+  <div class="wrap">
+    <img src="rule.png" alt="대한유소년야구연맹 로컬룰">
+  </div>
 </body>
 </html>
+
 
 
